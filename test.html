@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Funko page</title>
+    <script src="js/quiz.js"></script>
+</head>
+<body>
+    
+
+    <nav class="navbar navbar-dark navbar-expand-sm">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto"><img src="img/title.png" height="60"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><span class="fa fa-home fa-lg"></span> Inicio</a></li>
+                    <li class="nav-item"><a href="suscripcion.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Suscripcion</a></li>
+                    <li class="nav-item"><a href="envio.html" class="nav-link"><span class="fa fa-send fa-lg"></span> Envios</a></li>
+                    <li class="nav-item active"><a href="#" class="nav-link"><span class="fa fa-pencil fa-lg"></span> Test</a></li>
+                </ul>
+                <span class="navbar-text">
+                    <a id="loginButton" role="button">
+                        <span class="fa fa-user-circle"></span>Login
+                    </a>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="container">
+        <h1>Disney Quiz</h1>
+        <br>
+        <div>
+            <h3>Solo los verdaderos fans de Disney pasarán este quiz de paletas de colores de villanos</h3>
+        <br>
+        <div class="col-12 col-md-6">
+            <h4>1. ¿Quien es este villano?</h4>
+            <div class="col-12 mt-4 mb-4" id="preg01">
+                <img src="img/quiz/prg01.png" alt="prg01" class="img-fluid">
+            </div>
+            
+            <button id="btn01_01" class="btn btn-light btn-lg btn-block" type="button" onclick="prg01(0)">Madam Mim de la espade en la piedra</button>
+            <button id="btn01_02" class="btn btn-light btn-lg btn-block" type="button" onclick="prg01(1)">Úrsula de La sirenita</button>
+            <button id="btn01_03" class="btn btn-light btn-lg btn-block" type="button" onclick="prg01(0)">La madrastra malvada de La Cenicienta</button>
+            
+            <div class="col-12 mt-4 mb-4 ocultar" id="resp01">
+                <h3 id="resp01_dialog"></h3>
+                <h5>Úrsula de La sirenita</h5>
+                <img id="resp01_img" src="img/quiz/resp01.png" alt="prg01" class="img-fluid">
+            </div>
+        </div>
+        
+        <div class="col-12 col-md-6">
+            <h4>2. ¿Y que me dices de este villano de Disney?</h4>
+            <div class="col-12 mt-4 mb-4" id="preg02">
+                <img src="img/quiz/prg02.png" alt="prg02" class="img-fluid">
+            </div>
+            
+            <button id="btn02_01" class="btn btn-light btn-lg btn-block" type="button" onclick="prg02(1)">Cruela de Vil de 101 dálmatas</button>
+            <button id="btn02_02" class="btn btn-light btn-lg btn-block" type="button" onclick="prg02(0)">Sindrome de Los increibles</button>
+            <button id="btn02_03" class="btn btn-light btn-lg btn-block" type="button" onclick="prg02(0)">Gaston de La bella y la bestia</button>
+            
+            <div class="col-12 mt-4 mb-4 ocultar" id="resp02">
+                <h3 id="resp02_dialog"></h3>
+                <h5>Cruella de Vil de 101 dálmatas</h5>
+                <img id="resp02_img" src="img/quiz/resp02.png" alt="prg02" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <h4>3. ¿Quien es este villano?</h4>
+            <div class="col-12 mt-4 mb-4" id="preg03">
+                <img src="img/quiz/prg03.png" alt="prg03" class="img-fluid">
+            </div>
+            
+            <button id="btn03_01" class="btn btn-light btn-lg btn-block" type="button" onclick="prg03(0)">El Honrado Juan de Pinochi</button>
+            <button id="btn03_02" class="btn btn-light btn-lg btn-block" type="button" onclick="prg03(0)">El Principe John de Robin Hood</button>
+            <button id="btn03_03" class="btn btn-light btn-lg btn-block" type="button" onclick="prg03(1)">Scard de El rey león</button>
+            
+            <div class="col-12 mt-4 mb-4 ocultar" id="resp03">
+                <h3 id="resp03_dialog"></h3>
+                <h5>Scar de El rey león</h5>
+                <img id="resp03_img" src="img/quiz/resp03.png" alt="prg03" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <h4>4. ¿Quien es este villano?</h4>
+            <div class="col-12 mt-4 mb-4" id="preg04">
+                <img src="img/quiz/prg04.png" alt="prg04" class="img-fluid">
+            </div>
+            
+            <button id="btn04_01" class="btn btn-light btn-lg btn-block" type="button" onclick="prg04(0)">El Gobernador Ratcliff de Pocahontas</button>
+            <button id="btn04_02" class="btn btn-light btn-lg btn-block" type="button" onclick="prg04(1)">Hades de Hércules</button>
+            <button id="btn04_03" class="btn btn-light btn-lg btn-block" type="button" onclick="prg04(0)">El pincipe Hans de Frozen</button>
+            
+            <div class="col-12 mt-4 mb-4 ocultar" id="resp04">
+                <h3 id="resp04_dialog"></h3>
+                <h5>Hades de Hércules</h5>
+                <img id="resp04_img" src="img/quiz/resp04.png" alt="prg04" class="img-fluid">
+            </div>
+        </div>
+        </div>
+
+    </div>
+    
+    <footer class="footer">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-6 col-md-3">
+                    <h5><strong>Links</strong></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="suscripcion.html">Suscripcion</a></li>
+                        <li><a href="envio.html">Envios</a></li>
+                        <li><a href="#">Test</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h5><strong>Dirección</strong></h5>
+                    <address>
+                        Monoblock Central <br>
+                        Av. Villazón N° 1995, Plaza del Bicentenario - Zona Central.<br>
+                        LA PAZ, BOLIVIA <br>           
+                    </address>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h5><strong>Contactos</strong></h5>
+                    <ul  class="list-unstyled">
+                        <li><i class="fa fa-phone fa-lg"></i> +591 70112241 </li>
+                        <li><i class="fa fa-fax fa-lg"></i> +852 8765 4321 </li>
+                        <li><i class="fa fa-envelope fa-lg"></i>
+                        <a href="mailto:ventas@funkopop.com">ventas@funko.com</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="col-4 col-md-3">
+                    <h5><strong>Conectate con nosotros</strong></h5>
+                    <div class="text-center">
+                        <a class="btn fa fa-google" href="http://google.com/+"></a>
+                        <a class="btn fa fa-facebook" href="http://www.facebook.com/profile.php?id="></a>
+                        <a class="btn fa fa-twitter" href="http://twitter.com/"></a>
+                        <a class="btn fa fa-youtube" href="http://youtube.com/"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2018 Juan Jose Santos Miranda Mendoza</p>
+                </div>
+           </div>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
